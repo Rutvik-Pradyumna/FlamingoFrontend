@@ -1,0 +1,74 @@
+/* Nav.css */
+.Navbar-container {
+    font-family: Arial, sans-serif;
+    background-color: #fff5f7;
+}
+
+.header {
+    padding: 20px;
+    background-color: #fff5f7;
+}
+.logo{
+    width: 35%;
+}
+.logo h1 {
+    font-size: 40px;
+    color: #ff4d4d;
+    font-weight: bold;
+    margin: 0;
+}
+
+.logo span {
+    font-size: 20px;
+    color: #ff8080;
+    font-weight: normal;
+}
+.menu{
+    margin-left: 20%;
+}
+
+.nav-link {
+    color: #ff4d4d;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ff8080;
+}
+
+.social-icon {
+    color: #ff4d4d;
+    font-size: 30px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #ff8080;
+}
+
+/* Added for large screens only */
+@media (min-width: 992px) {
+    .navbar-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 991px) {
+    .nav {
+        padding: 1rem;
+    }
+
+    .nav-link {
+        padding: 0.5rem 0;
+        margin: 0;
+    }
+}
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
