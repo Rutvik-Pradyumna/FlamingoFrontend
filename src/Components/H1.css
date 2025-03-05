@@ -1,0 +1,85 @@
+/* Home.css */
+.home-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9ebeb; /* Light pink background */
+    padding: 50px;
+    min-height: 80vh;
+  }
+  
+  .content-section {
+    flex: 1;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+  
+  .content-section h1 {
+    /* text-align: left; */
+    font-family: Arial, sans-serif;
+    font-size: 50px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .content-section p {
+    /* text-align: left; */
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .book-appointment-btn {
+    background-color: #ff6666; /* Pink button color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  .book-appointment-btn:hover {
+    background-color: #ff8888; /* Slightly lighter pink on hover */
+  }
+  
+  .image-section {
+    width: 50%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    
+    
+  }
+  
+  .image-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .home-container {
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+  
+    .content-section {
+      padding-top: 15%;
+      padding-right: 0;
+      margin-bottom: 20px;
+      padding-bottom: 15%;
+    }
+  
+    .image-section {
+      justify-content: center;
+      margin-top: 3%;
+    }
+  }
