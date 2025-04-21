@@ -1,86 +1,126 @@
 .footer {
-    background-color: #f5f5f5;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .footer-top {
-    padding-top: 30px;
-    padding-bottom: 20px;
-    margin-bottom: 2%;
-  }
-  
-  .footer h2 {
-    font-size: 45px;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  .footer p {
-    font-size: 20px;
-    color: #333;
-  }
-  
-  .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 10px;
-    
-  }
-  
-  .icon {
-    font-size: 40px;
-    color: #ff6b6b;
-    cursor: pointer;
-  }
-  
+  background-color: #f5f5f5;
+  padding: 2rem 1rem; /* Changed to rem for better scaling */
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer-top {
+  padding: 2rem 0 1.5rem;
+  margin-bottom: 2%;
+}
+
+.footer h2 {
+  font-size: clamp(2rem, 5vw, 2.8125rem); /* Scales between 32px and 45px */
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.footer p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem); /* Scales between 16px and 20px */
+  color: #333;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: clamp(0.5rem, 2vw, 1.25rem); /* Flexible gap */
+  margin-top: 0.625rem;
+  flex-wrap: wrap; /* Allows icons to wrap on small screens */
+}
+
+.icon {
+  font-size: clamp(1.5rem, 4vw, 2.5rem); /* Scales between 24px and 40px */
+  color: #ff6b6b;
+  cursor: pointer;
+  transition: transform 0.2s; /* Smooth hover effect */
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  padding: 1.25rem;
+  flex-wrap: wrap; /* Allows sections to wrap on smaller screens */
+  gap: 1rem; /* Adds space between wrapped items */
+}
+
+.footer-section {
+  flex: 1;
+  padding: 0 0.9375rem;
+  min-width: 200px; /* Ensures readability on smaller screens */
+}
+
+.footer-section h3 {
+  font-size: clamp(1rem, 2vw, 1.125rem); /* Scales between 16px and 18px */
+  font-weight: bold;
+  margin-bottom: 0.625rem;
+}
+
+.footer-section p {
+  font-size: clamp(0.875rem, 1.5vw, 1rem); /* Scales between 14px and 16px */
+  color: #555;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 0.3125rem 0;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+  transition: color 0.2s;
+}
+
+.footer-section ul li a:hover {
+  color: #ff6b6b;
+}
+
+.footer-bottom {
+  margin-top: 1.25rem;
+  padding-top: 0.625rem;
+  border-top: 1px solid #ddd;
+}
+
+.footer-bottom p {
+  font-size: clamp(0.75rem, 1.2vw, 0.875rem); /* Scales between 12px and 14px */
+  color: #777;
+}
+
+/* Media Queries for additional control */
+@media screen and (max-width: 768px) {
   .footer-content {
-    display: flex;
-    justify-content: space-between;
-    text-align: left;
-    padding: 20px;
+      flex-direction: column; /* Stack sections vertically on tablets */
+      padding: 1rem;
   }
   
   .footer-section {
-    flex: 1;
-    padding: 0 15px;
+      padding: 0.5rem 0;
+      min-width: 100%; /* Full width on smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer {
+      padding: 1rem 0.5rem;
   }
   
-  .footer-section h3 {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
+  .footer-top {
+      padding: 1.5rem 0 1rem;
   }
   
-  .footer-section p {
-    font-size: 14px;
-    color: #555;
+  .social-icons {
+      gap: 0.75rem;
   }
-  
-  .footer-section ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .footer-section ul li {
-    margin: 5px 0;
-  }
-  
-  .footer-section ul li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 14px;
-  }
-  
-  .footer-bottom {
-    margin-top: 20px;
-    padding-top: 10px;
-    border-top: 1px solid #ddd;
-  }
-  
-  .footer-bottom p {
-    font-size: 12px;
-    color: #777;
-  }
-  
+}

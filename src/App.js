@@ -5,7 +5,10 @@ import Nav from './Components/Nav';
 import Home from './Components/home';
 import Footer from './Components/Footer';
 import Contact from './Components/contact';
+import Services from './Components/Services';
 import FloatingPhone from './Components/FloatingPhone';
+import Location from './Components/Location';
+
 
 
 
@@ -17,14 +20,16 @@ function App() {
       <Router>
         <div>
           <Nav  />
-          <FloatingPhone />
+          {/* <FloatingPhone /> */}
           <Routes>
             <Route path="/" element={<Home />}/>
             {/* <Route path="/about" /> */}
-            <Route path="/sevices" />
+            <Route path="/services" element={<Services />}/>
             <Route path="/contact" element={<Contact />}/>
             
+            
           </Routes>
+          <Location />
           <Footer  />
         </div>
       </Router>

@@ -1,85 +1,120 @@
 /* Home.css */
 .home-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #f9ebeb; /* Light pink background */
-    padding: 50px;
-    min-height: 80vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9ebeb;
+  padding: clamp(1.5rem, 5vw, 3.125rem); /* Scales between 24px and 50px */
+  min-height: 80vh;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.content-section {
+  flex: 1;
+  padding-right: clamp(1rem, 3vw, 2.5rem); /* Scales between 16px and 40px */
+  padding-left: clamp(1rem, 3vw, 2.5rem);
+}
+
+.content-section h1 {
+  font-family: Arial, sans-serif;
+  font-size: clamp(1.75rem, 5vw, 3.125rem); /* Scales between 28px and 50px */
+  color: #333;
+  margin-bottom: clamp(0.75rem, 2vw, 1.25rem); /* Scales between 12px and 20px */
+  line-height: 1.2;
+}
+
+.content-section p {
+  font-family: Arial, sans-serif;
+  font-size: clamp(1rem, 3vw, 1.875rem); /* Scales between 16px and 30px */
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: clamp(0.75rem, 2vw, 1.25rem);
+}
+
+.book-appointment-btn {
+  background-color: #ff6666;
+  color: white;
+  border: none;
+  padding: clamp(0.5rem 1rem, 2vw, 0.625rem 1.25rem); /* Scales padding */
+  font-size: clamp(0.875rem, 1.5vw, 1rem); /* Scales between 14px and 16px */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+  margin-top: clamp(0.75rem, 2vw, 1.25rem);
+  display: inline-block; /* Ensures proper centering on mobile */
+}
+
+.book-appointment-btn:hover {
+  background-color: #ff8888;
+  transform: scale(1.05); /* Added subtle scale effect */
+}
+
+.image-section {
+  flex: 1;
+  width: 100%; /* Changed from 50% to be more flexible */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  object-fit: cover; /* Ensures image maintains aspect ratio */
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .home-container {
+      padding: 2rem;
   }
   
   .content-section {
-    flex: 1;
-    padding-right: 40px;
-    padding-left: 40px;
+      padding-right: 1.5rem;
+      padding-left: 1.5rem;
   }
-  
-  .content-section h1 {
-    /* text-align: left; */
-    font-family: Arial, sans-serif;
-    font-size: 50px;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  .content-section p {
-    /* text-align: left; */
-    font-family: Arial, sans-serif;
-    font-size: 30px;
-    color: #666;
-    line-height: 1.6;
-    margin-bottom: 20px;
-  }
-  
-  .book-appointment-btn {
-    background-color: #ff6666; /* Pink button color */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 20px;
-  }
-  
-  .book-appointment-btn:hover {
-    background-color: #ff8888; /* Slightly lighter pink on hover */
-  }
-  
-  .image-section {
-    width: 50%;
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    
-    
-  }
-  
-  .image-section img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Responsive design */
-  @media (max-width: 768px) {
-    .home-container {
+}
+
+@media (max-width: 768px) {
+  .home-container {
       flex-direction: column;
-      text-align: center;
-      padding: 20px;
-    }
-  
-    .content-section {
-      padding-top: 15%;
-      padding-right: 0;
-      margin-bottom: 20px;
-      padding-bottom: 15%;
-    }
-  
-    .image-section {
-      justify-content: center;
-      margin-top: 3%;
-    }
+      padding: 1.5rem;
+      min-height: auto; /* Allows content to dictate height */
   }
+
+  .content-section {
+      padding: 2rem 0;
+      text-align: center;
+  }
+
+  .content-section h1 {
+      text-align: center;
+  }
+
+  .content-section p {
+      text-align: center;
+  }
+
+  .image-section {
+      width: 100%;
+      margin-top: 2rem;
+      padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-container {
+      padding: 1rem;
+  }
+
+  .content-section {
+      padding: 1.5rem 0;
+  }
+
+  .image-section {
+      margin-top: 1.5rem;
+  }
+}
