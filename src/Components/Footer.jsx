@@ -27,7 +27,7 @@ const Footer = () => {
         </div>
         <div className="footer-section">
           <h3>Address</h3>
-          <p>8-2-403/B/3/A, Road number 4, Banjara Hills, Hyderabad - 500034.</p>
+          <p>Hno. 11-13-877/3, Green Hills Colony Rd Number 3,Dwarka Nagar, Kothapet, Hyderabad, Telangana 500035</p>
         </div>
         <div className="footer-section">
           <h3>Services</h3>

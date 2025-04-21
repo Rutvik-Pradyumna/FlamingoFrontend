@@ -59,8 +59,7 @@ const C1 = () => {
           </p>
           <div className="contact-details">
             <p>
-              <span className="icon location">📍</span> 8-2-405/B/5/A, Road number 4, Banjara Hills,
-              Hyderabad - 500 034.
+              <span className="icon location">📍</span> Hno. 11-13-877/3, Green Hills Colony Rd Number 3, Kothapet, Hyderabad, Telangana 500035
             </p>
             <p>
               <span className="icon phone">📞</span> +91 7793988803
