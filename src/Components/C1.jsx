@@ -1,8 +1,52 @@
 // C1.jsx
-import React from 'react';
+import React, { useState } from 'react';
 import './C1.css';
+import { useNavigate } from 'react-router-dom'; // Import navigate for redirection
 
 const C1 = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
+  });
+
+  const navigate = useNavigate(); 
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    let res;
+    e.preventDefault();
+    const { name, email, subject, message } = formData;
+    console.log(formData);
+
+    res = await fetch('http://localhost:5000/api/appointment', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ name, email, subject, message }),
+    });
+    console.log(res.body);
+
+    if (res.status === 400) {
+      console.log(res.status);
+      alert('Couldn\'t send message!! An error occurred');
+    } else {
+      console.log(res.status);
+      alert('Message sent successfully! Please check your email for confirmation (if applicable)');
+      navigate('/'); // Redirect to home page or another page after success
+      setFormData({ name: '', email: '', subject: '', message: '' }); // Reset form
+    }
+  };
+
   return (
     <div className="c1-container">
       <div className="contact-content">
@@ -19,23 +63,52 @@ const C1 = () => {
               Hyderabad - 500 034.
             </p>
             <p>
-              <span className="icon phone">📞</span> +91 9008162224
+              <span className="icon phone">📞</span> +91 7793988803
             </p>
             <p>
-              <span className="icon email">📧</span> nailishq@gmail.com
+              <span className="icon email">📧</span> Nailsbyflamingo@gmail.com
             </p>
           </div>
         </div>
         <div className="contact-form">
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className="form-row">
-              <input type="text" placeholder="First Name" required />
-              <input type="text" placeholder="Last Name" required />
+              <input
+                type="text"
+                name="name"
+                placeholder="Name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
             </div>
-            <input type="email" placeholder="Email Address" required />
-            <input type="text" placeholder="Subject" required />
-            <textarea placeholder="Your Message" rows="4" required></textarea>
-            <button type="submit" className="send-button">Send Message</button>
+            <input
+              type="email"
+              name="email"
+              placeholder="Email Address"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="text"
+              name="subject"
+              placeholder="Subject"
+              value={formData.subject}
+              onChange={handleChange}
+              required
+            />
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              rows="4"
+              value={formData.message}
+              onChange={handleChange}
+              required
+            ></textarea>
+            <button type="submit" className="send-button">
+              Send Message
+            </button>
           </form>
         </div>
       </div>

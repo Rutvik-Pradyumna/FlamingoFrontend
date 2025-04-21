@@ -2,15 +2,15 @@
 import React from 'react';
 import './H3.css';
 import aboutMeImage from './pic1.jpg'; // Replace with your image path
-import work1 from './pic1.jpg'; // Replace with your image paths
-import work2 from './pic1.jpg';
-import work3 from './pic1.jpg';
-import work4 from './pic1.jpg';
-import work5 from './pic1.jpg';
-import work6 from './pic1.jpg';
-import work7 from './pic1.jpg';
-import work8 from './pic1.jpg';
-import work9 from './pic1.jpg';
+import NailExtension from '../Images/NailExtension.jpg';
+import NailArt from '../Images/NailArt.jpg';
+import OverLay from '../Images/OverLay.jpg';
+import OmbreNails from '../Images/OmbreNails.jpg';
+import ThreeDNailArt from '../Images/3DNailArt.jpg';
+import CatEye from '../Images/CatEye.jpg';
+import ToeNails from '../Images/ToeNails.jpg';
+import GelPolish from '../Images/GelPolish.jpg';
+import BridalNails from '../Images/BridalNails.jpg';
 import { useNavigate } from "react-router-dom";
 
 
@@ -48,10 +48,10 @@ const H3 = () => {
           and feet with our varied services.
         </p>
         <div className="work-grid">
-          <img src={work1} alt="Work 1" />
-          <img src={work2} alt="Work 2" />
-          <img src={work3} alt="Work 3" />
-          <img src={work4} alt="Work 4" />
+          <img src={ThreeDNailArt} alt="Work 1" />
+          <img src={BridalNails} alt="Work 2" />
+          <img src={CatEye} alt="Work 3" />
+          <img src={NailArt} alt="Work 4" />
           {/* <img src={work5} alt="Work 5" />
           <img src={work6} alt="Work 6" />
           <img src={work7} alt="Work 7" />

@@ -9,15 +9,21 @@ const Footer = () => {
         <h2>NailArt</h2>
         <p>Follow us on Social Media</p>
         <div className="social-icons">
-          <FaFacebook className="icon" />
-          <FaInstagram className="icon" />
-          <FaYoutube className="icon" />
+          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+            <FaFacebook className="icon" />
+          </a>
+          <a href="https://www.instagram.com/nailsbyflamingo_/?igsh=bGN5ZXM2NWYwczR1&utm_source=qr#" target="_blank" rel="noopener noreferrer">
+            <FaInstagram className="icon" />
+          </a>
+          <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+            <FaYoutube className="icon" />
+          </a>
         </div>
       </div>
       <div className="footer-content">
         <div className="footer-section">
           <h3>Email</h3>
-          <p>nailishq@gmail.com</p>
+          <p>Nailsbyflamingo@gmail.com</p>
         </div>
         <div className="footer-section">
           <h3>Address</h3>
@@ -48,7 +54,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-bottom">
-        <p>Copyright © 2025 NailArt | Powered by Enturi</p>
+        <p>Copyright © 2025 Flamingo</p>
       </div>
     </footer>
   );
