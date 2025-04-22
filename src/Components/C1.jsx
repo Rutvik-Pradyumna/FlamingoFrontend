@@ -27,7 +27,7 @@ const C1 = () => {
     const { name, email, subject, message } = formData;
     console.log(formData);
 
-    res = await fetch('http://localhost:5000/api/appointment', {
+    res = await fetch('http://localhost:5000/appointment', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
